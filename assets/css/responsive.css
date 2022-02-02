@@ -1,0 +1,101 @@
+
+
+
+/* ------- Mobile ------- */
+/* nhỏ hơn hoặc bằng 739px thì chạy */
+@media (max-width: 739px) {
+
+    #header {
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+    #nav {
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+    }
+
+    .nav__item:first-child .nav__link {
+        display: inline-block;
+    }
+
+    .nav__link {
+        display: block;
+    }
+
+    .subnav {
+        position: initial;
+        background-color: var(--text-color);
+    }
+
+    .subnav__link {
+        color: var(--white-color);
+        padding: 20px 34px;
+    }
+
+    .header__search {
+        display: none;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .mobile__menu-btn {
+        display: block;
+    }
+
+    .about-member-item-img {
+        width: 60%;
+    }
+    
+    .width-full,
+    .col-12 {
+        width: 100%;
+    }
+
+    .mb-5 {
+        margin-bottom: 5px;
+    }
+ 
+    .pull-ful {
+        width: 100%;
+    }
+
+    .contact-info {
+        line-height: 2;
+    }
+
+}
+
+/* ------- Tablet ------- */
+/* lớn hơn hoặc bằng 740px thì chạy */
+/* and */
+/* nhở hơn hoặc bằng 1023px thì chạy */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+    .contact-info {
+        line-height: 1.7;
+    }
+}
+
+
+/* ------- Mobile and Tablet ------- */
+/* nhỏ hơn hoặc bằng 1023px thì chạy */
+@media (max-width: 1023px) {
+
+    .btn {
+        padding: 16px 16px;
+    }
+
+    .footer-social-list a {
+        font-size: 48px;
+        margin:0 8px;
+    }
+
+
+}

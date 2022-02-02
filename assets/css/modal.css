@@ -1,0 +1,136 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    z-index: 1;
+    display: none;
+}
+
+.modal.modal--active {
+    display: flex;
+}
+
+.modal-container {
+    z-index: 1;
+    background-color: var(--white-color);
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    margin: auto;
+    position: relative;
+    animation: modalFadeIn ease 0.4s;
+    -webkit-animation: modalFadeIn ease 0.4s;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.modal-close-icon {
+    padding: 8px 10px;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--white-color);
+}
+
+.modal-close-icon:hover {
+    background-color: #ccc;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.modal-header {
+    background-color: #009688;
+    padding: 42px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    
+}
+
+.modal-icon {
+    margin-right: 10px;
+    position: relative;
+    top: -2px;
+}
+
+.modal-icon,
+.modal-heading {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.modal-heading {
+    letter-spacing: 4px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+}
+
+.modal-label {
+    font-size: 15px;
+    margin: 15px 0 15px 0;
+}
+
+.modal-input {
+    margin-bottom: 15px;
+    padding: 8px;
+    font-size: 15px;
+    outline-color: #009688;
+    border: 1px solid #ccc;
+}
+
+#buy-tickets {
+    background-color: #009688;
+    color: var(--white-color);
+    padding: 16px;
+    font-size: 15px;
+    border: none;
+    margin: 16px 0;
+}
+
+#buy-tickets:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+    -webkit-filter: brightness(120%);
+}
+
+.modal-footer {
+    margin: 15px 16px;
+    text-align: right;
+}
+
+.modal-help-link {
+    color: #4292FF;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+}
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+}
